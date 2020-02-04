@@ -1,0 +1,49 @@
+<form #prodform="ngForm">
+
+    <h2>Detalles de Producto</h2>
+    <br>
+    <span class="ui-float-label">
+        <input id="float-input" type="text" size="30" pInputText name="nombre" #nombre="ngModel"
+            [(ngModel)]="Proservice.produSel.nombre">
+        <label for="float-input">Nombre del producto</label>
+    </span>
+    <br>
+    <span class="ui-float-label">
+        <input id="float-input" type="text" size="30" pInputText name="descripcion" #descripcion="ngModel"
+            [(ngModel)]="Proservice.produSel.descripcion">
+        <label for="float-input">Descripcion del producto</label>
+    </span>
+    <br>
+    <span class="ui-float-label">
+        <input id="float-input" type="text" size="30" pInputText #especificaciones="ngModel" name="especificaciones"
+            [(ngModel)]="Proservice.produSel.especificaciones">
+        <label for="float-input">Especificacion del producto</label>
+    </span>
+    <br>
+
+    <span class="ui-float-label">
+
+        <input id="float-input" type="number" size="30" pInputText #precio="ngModel" name="precio"
+            [(ngModel)]="Proservice.produSel.precio">
+
+        <label for="float-input">$ Precio del producto</label>
+    </span>
+    <br>
+    <label for="float-input">Imagen del producto</label>
+    <span class="ui-float-label">
+
+
+        <input type="file" size="30" pInputText #imagen name="imagen" [(ngModel)]="Proservice.produSel.imagen">
+    </span>
+    <br>
+    <h3 class="first">Categoria</h3>
+
+    <select name="seleccion" [(ngModel)]="Proservice.produSel.categoria_producto">
+
+        <option [(ngValue)]="categoria" *ngFor="let categoria of Categservice.categoria"> {{categoria.nombre}} </option>
+    </select>
+    <br>
+    <br>
+    <button pButton type="button" label="Enviar" class="ui-button-rounded" (click)="ingresarPro(prodform)"></button>
+
+</form>
