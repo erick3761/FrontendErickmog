@@ -1,1 +1,17 @@
-<p>eliminarcategoria works!</p>
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="card text-center">
+            <img src="https://as.com/tikitakas/imagenes/2017/09/30/portada/1506755898_665682_1506756839_noticia_normal.jpg"
+                class="card-img-top">
+            <div class="card-header">
+                <h3 class="card-title">{{catServ.catSele.nombre}}</h3>
+            </div>
+            <div class="card-body">
+                <h5 class="card-subtitle">Descripción</h5>
+                <p class="card-text">{{catServ.catSele.descripcion}}</p>
+                <button type="button" class="btn btn-primary">Eliminar</button>
+                <button type="button" class="btn btn-danger" [routerLink]="['/categoria/listar']">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -20,24 +20,24 @@ import { ListarservicioComponent } from './Servicio/listarservicio/listarservici
 const routes: Routes = [
 
 
-  {path:'producto/ingresar', component: IngresarproductoComponent},
-  {path: 'producto/eliminar/:id', component: EliminarproductoComponent},
-  {path: 'producto/editar/:id',component:EditarproductoComponent},
-  {path:'producto/buscar/:id',component: BuscarproductoComponent},
-  {path:'producto/listar',component:ListarproductoComponent},
+  { path: 'producto/ingresar', component: IngresarproductoComponent },
+  { path: 'producto/eliminar', component: EliminarproductoComponent },
+  { path: 'producto/editar/:id', component: EditarproductoComponent },
+  { path: 'producto/buscar/:id', component: BuscarproductoComponent },
+  { path: 'producto/listar', component: ListarproductoComponent },
 
-  {path: 'categoria/ingresar', component:IngresarcategoriaComponent},
-  {path:'categoria/buscar/:id', component:BuscarcategoriaComponent},
-  {path: 'categoria/eliminar/:id', component:EliminarcategoriaComponent},
-  {path: 'categoria/listar', component: ListarcategoriaComponent},
-  {path: 'categoria/editar/:id', component: EditarcategoriaComponent},
+  { path: 'categoria/ingresar', component: IngresarcategoriaComponent },
+  { path: 'categoria/buscar/:id', component: BuscarcategoriaComponent },
+  { path: 'categoria/eliminar', component: EliminarcategoriaComponent },
+  { path: 'categoria/listar', component: ListarcategoriaComponent },
+  { path: 'categoria/editar/:id', component: EditarcategoriaComponent },
 
 
-  {path: 'servicio/ingresar', component:IngresarservicioComponent },
-  {path: 'servicio/buscar/:id', component:BuscarservicioComponent },
-  {path: 'servicio/editar/:id', component:EditarservicioComponent },
-  {path: 'servicio/eliminar/:id', component:EliminarservicioComponent },
-  {path: 'servicio/listar', component:ListarservicioComponent },
+  { path: 'servicio/ingresar', component: IngresarservicioComponent },
+  { path: 'servicio/buscar/:id', component: BuscarservicioComponent },
+  { path: 'servicio/editar/:id', component: EditarservicioComponent },
+  { path: 'servicio/eliminar', component: EliminarservicioComponent },
+  { path: 'servicio/listar', component: ListarservicioComponent },
 ];
 
 @NgModule({

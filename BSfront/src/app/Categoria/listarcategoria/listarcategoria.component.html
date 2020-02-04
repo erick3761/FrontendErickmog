@@ -1,20 +1,21 @@
 <table class="table table-hover text-center">
-    <thead>
-      <tr>
-        <th scope="col">Id categoria</th>
-        <th scope="col">nombre cat</th>
-        <th scope="col">descrip cat</th>
-     
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let c of categoriaService.categoria">
-        <td scope="row">{{c.id}}</td>
-        <td>{{c.nombre}}</td>
-        <td>{{c.descripcion}}</td>
-        
-      </tr>
-    </tbody>
-  </table>
+  <thead>
+    <tr>
+      <th scope="col">Id categoria</th>
+      <th scope="col">nombre cat</th>
+      <th scope="col">descrip cat</th>
 
-  
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of categoriaService.categoria">
+      <td scope="row">{{c.id}}</td>
+      <td>{{c.nombre}}</td>
+      <td>{{c.descripcion}}</td>
+      <td> <button><i class="fas fa-edit"></i></button> </td>
+      <td><button (click)="data(c,'/categoria/eliminar')"><i class="fas fa-trash-alt"></i></button></td>
+
+    </tr>
+  </tbody>
+</table>
