@@ -9,7 +9,7 @@
             <div class="card-body">
                 <h5 class="card-subtitle">Descripción</h5>
                 <p class="card-text">{{catServ.catSele.descripcion}}</p>
-                <button type="button" class="btn btn-primary">Eliminar</button>
+                <button type="button" class="btn btn-primary" (click)="eliminarCategoria()">Eliminar</button>
                 <button type="button" class="btn btn-danger" [routerLink]="['/categoria/listar']">Cancelar</button>
             </div>
         </div>
