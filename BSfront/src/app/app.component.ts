@@ -59,7 +59,7 @@ export class AppComponent {
 
         ]
       },
-{label:'TUSA'}
+      { label: 'TUSA' }
 
     ];
   }

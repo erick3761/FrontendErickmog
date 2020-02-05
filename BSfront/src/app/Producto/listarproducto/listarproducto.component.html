@@ -17,6 +17,8 @@
       <td>{{p.especificaciones}}</td>
       <td>{{p.precio}}</td>
       <td> {{p.categoria_producto.nombre}} </td>
+      <td> <button><i class="fas fa-edit"></i></button> </td>
+      <td><button (click)="data(p,'/producto/eliminar')"><i class="fas fa-trash-alt"></i></button></td>
 
     </tr>
   </tbody>

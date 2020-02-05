@@ -1,19 +1,21 @@
-<form action="">
-   
+<form #catform="ngForm">
+
     <h2>Detalles de Categoria</h2>
     <br>
     <span class="ui-float-label">
-        <input id="float-input" type="text" size="30" pInputText> 
+        <input id="float-input" type="text" size="30" pInputText name="nombre" #nombre="ngModel"
+            [(ngModel)]="catService.catSele.nombre">
         <label for="float-input">Nombre de la categoria</label>
     </span>
     <br>
     <span class="ui-float-label">
-        <input id="float-input" type="text" size="30" pInputText> 
+        <input id="float-input" type="text" size="30" pInputText name="descripcion" #descripcion="ngModel"
+            [(ngModel)]="catService.catSele.descripcion">
         <label for="float-input">Descripcion de la categoria</label>
     </span>
     <br>
-   
+
     <br>
-    <button pButton type="button" label="Enviar" class="ui-button-rounded"></button>
-    
+    <button pButton type="button" label="Enviar" class="ui-button-rounded" (click)="ingresarCat(catform)"></button>
+
 </form>

@@ -1,36 +1,43 @@
-<form action="">
-   
+<form #serForm="ngForm">
+
     <h2>Detalles de Servicio</h2>
     <br>
     <span class="ui-float-label">
-        <input id="float-input" type="text" size="30" pInputText> 
+        <input id="float-input" type="text" size="30" pInputText #nombre_servicio="ngModel"
+            [(ngModel)]="servService.servicioSelect.nombre_servicio" name="nombre_servicio">
         <label for="float-input">Nombre del servicio</label>
     </span>
     <br>
     <span class="ui-float-label">
-        <input id="float-input" type="text" size="30" pInputText> 
+        <input id="float-input" type="text" size="30" pInputText #descripcion_servicio="ngModel"
+            name="descripcion_servicio" [(ngModel)]="servService.servicioSelect.descripcion_servicio">
         <label for="float-input">Descripcion del servicio</label>
     </span>
     <br>
-   
+
     <span class="ui-float-label">
-        <input id="float-input" type="number" size="30" pInputText> 
+        <input id="float-input" type="number" size="30" pInputText #precio_servicio="ngModel" name="precio_servicio"
+            [(ngModel)]="servService.servicioSelect.precio_servicio">
         <label for="float-input">$ Precio del servicio</label>
     </span>
     <br>
     <label for="float-input">Imagen del servicio</label>
     <span class="ui-float-label">
-        
-        
-        <input  type="file" size="30" pInputText>
+
+
+        <input type="file" size="30" pInputText>
     </span>
     <br>
 
     <h3 class="first">Categoria</h3>
-<p-dropdown ></p-dropdown>
+
+    <select name="seleccion" [(ngModel)]="servService.servicioSelect.servicio_categoria">
+
+        <option [(ngValue)]="categoria" *ngFor="let categoria of catServi.categoria"> {{categoria.nombre}} </option>
+    </select>
     <br>
     <br>
-    <button pButton type="button" label="Registrar" class="ui-button-rounded"></button>
+    <button pButton type="button" label="Registrar" class="ui-button-rounded" (click)="ingresarServi(serForm)"></button>
 
 
 </form>

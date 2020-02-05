@@ -1,1 +1,21 @@
-<p>eliminarservicio works!</p>
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="card text-center">
+            <img src="https://zonalogistica.com/wp-content/uploads/2016/11/soporte-con-iconos_1212-151.jpg" height="184"
+                width="300" class="card-img-top">
+            <div class="card-header">
+                <h3 class="card-title">{{servService.servicioSelect.nombre_servicio}}</h3>
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-subtitle">Descripción</h5>
+                <p class="card-text">{{servService.servicioSelect.descripcion_servicio}}</p><br>
+                <h5 class="card-subtitle">Precio</h5>
+                <p class="card-text"> {{servService.servicioSelect.precio_servicio}} </p><br>
+                <button type="button" class="btn btn-primary" (click)="eliminarServicio()">Eliminar</button>
+                <button type="button" class="btn btn-danger" [routerLink]="['/servicio/listar']">Cancelar</button>
+
+            </div>
+        </div>
+    </div>
+</div>

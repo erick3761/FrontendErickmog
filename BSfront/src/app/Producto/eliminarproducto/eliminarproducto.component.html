@@ -1,1 +1,24 @@
-<p>eliminarproducto works!</p>
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="card text-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoGf7YU6F6DeVXyKHTFsAy5c2vClR3ve7UwCn9889PqzlCZBrf&s"
+                class="card-img-top">
+            <div class="card-header">
+                <h3 class="card-title">{{prodService.produSel.nombre}}</h3>
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-subtitle">Descripción</h5>
+                <p class="card-text">{{prodService.produSel.descripcion}}</p><br>
+                <h5 class="card-subtitle">Especificaciones</h5>
+                <p class="card-text"> {{prodService.produSel.especificaciones}} </p><br>
+                <h5 class="card-subtitle">Precio</h5>
+                <p class="card-text"> {{prodService.produSel.precio}} </p><br>
+
+                <button type="button" class="btn btn-primary" (click)="eliminarProducto()">Eliminar</button>
+                <button type="button" class="btn btn-danger" [routerLink]="['/servicio/listar']">Cancelar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
