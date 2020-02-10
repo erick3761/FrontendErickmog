@@ -59,7 +59,18 @@ export class AppComponent {
 
         ]
       },
-      { label: 'TUSA' }
+      {
+        label: 'TUSA',
+        items: [
+          [
+            {
+              items: [
+                { label: 'Subir IMG', routerLink: 'imagen/subir' },
+              ]
+            },
+          ],
+        ]
+      }
 
     ];
   }

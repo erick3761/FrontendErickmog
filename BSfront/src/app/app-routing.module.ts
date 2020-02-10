@@ -15,6 +15,7 @@ import { BuscarservicioComponent } from './Servicio/buscarservicio/buscarservici
 import { EditarservicioComponent } from './Servicio/editarservicio/editarservicio.component';
 import { EliminarservicioComponent } from './Servicio/eliminarservicio/eliminarservicio.component';
 import { ListarservicioComponent } from './Servicio/listarservicio/listarservicio.component';
+import { IngresarimgComponent } from './Imagen/ingresarimg/ingresarimg.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,9 @@ const routes: Routes = [
   { path: 'servicio/editar/:id', component: EditarservicioComponent },
   { path: 'servicio/eliminar', component: EliminarservicioComponent },
   { path: 'servicio/listar', component: ListarservicioComponent },
+
+
+  { path: 'imagen/subir', component: IngresarimgComponent },
 ];
 
 @NgModule({

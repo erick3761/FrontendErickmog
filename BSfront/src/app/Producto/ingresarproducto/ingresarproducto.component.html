@@ -33,7 +33,8 @@
     <span class="ui-float-label">
 
 
-        <input type="file" size="30" pInputText #imagen name="imagen" [(ngModel)]="Proservice.produSel.imagen">
+        <input type="file" size="30" pInputText #imagen accept="image/*" (change)="onSelectFile($event)" name="imagen"
+            [(ngModel)]="Proservice.produSel.imagen">
     </span>
     <br>
     <h3 class="first">Categoria</h3>

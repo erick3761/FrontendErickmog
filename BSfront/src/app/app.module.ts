@@ -4,10 +4,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
+
 import { MegaMenuModule } from "primeng/megamenu";
-import {ButtonModule} from 'primeng/button';
-import {InputTextModule} from 'primeng/inputtext';
-import {DropdownModule} from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
 
 
@@ -28,10 +29,12 @@ import { IngresarservicioComponent } from './Servicio/ingresarservicio/ingresars
 import { EditarservicioComponent } from './Servicio/editarservicio/editarservicio.component';
 import { EliminarservicioComponent } from './Servicio/eliminarservicio/eliminarservicio.component';
 import { BuscarservicioComponent } from './Servicio/buscarservicio/buscarservicio.component';
+import { IngresarimgComponent } from './Imagen/ingresarimg/ingresarimg.component';
 
 import { ServicioService } from './Servicio/servicio.service';
 import { ProductoService } from './Producto/producto.service';
 import { CategoriaService } from './Categoria/categoria.service';
+
 
 @NgModule({
   declarations: [
@@ -50,7 +53,8 @@ import { CategoriaService } from './Categoria/categoria.service';
     IngresarservicioComponent,
     EditarservicioComponent,
     EliminarservicioComponent,
-    BuscarservicioComponent
+    BuscarservicioComponent,
+    IngresarimgComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +69,7 @@ import { CategoriaService } from './Categoria/categoria.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ServicioService,ProductoService,CategoriaService],
+  providers: [ServicioService, ProductoService, CategoriaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,6 +12,7 @@ import { Categoria } from 'src/app/Categoria/Categoria';
 })
 export class IngresarproductoComponent implements OnInit {
 
+  public prodFile: any = File;
   constructor(private Proservice: ProductoService, private router: Router, private Categservice: CategoriaService) { }
 
   ngOnInit() {
@@ -26,11 +27,21 @@ export class IngresarproductoComponent implements OnInit {
   }
 
   ingresarPro(form: NgForm) {
+
     this.Proservice.GuardarProductos(this.Proservice.produSel).subscribe(res => {
       this.router.navigate(['/producto/listar']);
+      //agg
+      const formdata = new FormData();
+      formdata.append('file', this.prodFile);
       console.log(this.listarCateg());
     });
   }
 
+
+  onSelectFile(event) {
+    const file = event.target.files[0];
+    console.log(file);
+    this.prodFile = file;
+  }
 
 }
