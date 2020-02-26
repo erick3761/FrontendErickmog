@@ -1,0 +1,47 @@
+<h1>Inicio sesion Redes Sociales mog</h1>
+
+
+<button class="loginBtn loginBtn--facebook" (click)="ingresarfbk('Facebook');">
+    Iniciar con Facebook
+</button>
+
+<button class="loginBtn loginBtn--google" (click)="ingresar('Google');">
+    Iniciar con Google
+</button>
+
+<br><br>
+<button (click)="cerrarsesion();">Cerrar Sesión</button>
+<br>
+
+
+
+
+
+<div *ngIf="user" class="card mb-8">
+
+    <div class="card">
+        <h3 class="card-header text-"> Hola {{user.firstName}} </h3>
+        <div class="card-body">
+            <h5 class="card-title">Inicio de sesion con: {{user.provider}} </h5>
+            <h6 class="card-subtitle text-muted"> Sesion activa</h6>
+        </div>
+        <img style="height: 150px; width: 15%; display: block;" src="{{user.photoUrl}}" alt="Card image">
+        <div class="card-body">
+            <p class="card-text">Informacion del contacto</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"> {{user.firstName}} </li>
+            <li class="list-group-item"> {{user.lastName}} </li>
+            <li class="list-group-item"> {{user.email}} </li>
+        </ul>
+
+        <div class="card-footer text-muted">
+            {{user.provider}}
+        </div>
+    </div>
+</div>
+
+
+<br>
+<br>
+<hr>
