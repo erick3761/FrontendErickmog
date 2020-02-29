@@ -1,18 +1,27 @@
 <div class="container row">
     <div class="col-md-12">
-        <h1>Upload Image</h1>
+        <h1>Subir Imagen</h1>
     </div>
 </div>
+<br>
+<fieldset>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="custom-file">
 
-<div class="container row">
-    <div class="col-md-6">
-        <input type="file" (change)="onFileChanged($event)">
+                <input type="file" class="custom-file-input" id="inputGroupFile02" multiple="multiple"
+                    (change)="onFileChanged($event)">
+                <label class="custom-file-label" for="inputGroupFile02">Buscar Imagen</label>
+            </div>
+            <div class="input-group-append">
+                <input type="button" (click)="onUpload()" value="Subir">
+            </div>
+        </div>
+    </div>
+</fieldset>
 
-    </div>
-    <div class="col-md-6">
-        <input type="button" (click)="onUpload()" value="upload">
-    </div>
-</div>
+<br>
+
 <hr />
 <div class="container row">
     <div class="col-md-12">

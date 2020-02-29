@@ -16,6 +16,8 @@ import { EditarservicioComponent } from './Servicio/editarservicio/editarservici
 import { EliminarservicioComponent } from './Servicio/eliminarservicio/eliminarservicio.component';
 import { ListarservicioComponent } from './Servicio/listarservicio/listarservicio.component';
 import { IngresarimgComponent } from './Imagen/ingresarimg/ingresarimg.component';
+import { PruebaimgComponent } from './Imagen/pruebaimg/pruebaimg.component';
+import { PagopruebaComponent } from './Pago/pagoprueba/pagoprueba.component';
 
 
 const routes: Routes = [
@@ -40,8 +42,12 @@ const routes: Routes = [
   { path: 'servicio/eliminar', component: EliminarservicioComponent },
   { path: 'servicio/listar', component: ListarservicioComponent },
 
-
+  //img de prueba
   { path: 'imagen/subir', component: IngresarimgComponent },
+
+  { path: 'imagen/pruebaimg', component: PruebaimgComponent },
+  //pago prueba
+  { path: 'pago/pruebapago', component: PagopruebaComponent },
 ];
 
 @NgModule({

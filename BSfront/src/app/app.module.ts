@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FileUploadModule } from "primeng/fileupload";
 
 
 import { MegaMenuModule } from "primeng/megamenu";
@@ -10,6 +11,9 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
+
+import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
+import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,7 +38,31 @@ import { IngresarimgComponent } from './Imagen/ingresarimg/ingresarimg.component
 import { ServicioService } from './Servicio/servicio.service';
 import { ProductoService } from './Producto/producto.service';
 import { CategoriaService } from './Categoria/categoria.service';
+import { PruebaimgComponent } from './Imagen/pruebaimg/pruebaimg.component';
+import { ImagenService } from './Imagen/imagen.service';
+import { PagopruebaComponent } from './Pago/pagoprueba/pagoprueba.component';
 
+//google
+const aothclient: string = "799281769519-ddmij1unglk1hi4ee8sqfl1mn3p1vvf2.apps.googleusercontent.com";
+
+
+let config = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider(aothclient)
+  },
+  {
+    //facebook
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider('2937619732925232')
+  }
+]);
+
+
+
+export function provideConfig() {
+  return config;
+}
 
 @NgModule({
   declarations: [
@@ -54,7 +82,9 @@ import { CategoriaService } from './Categoria/categoria.service';
     EditarservicioComponent,
     EliminarservicioComponent,
     BuscarservicioComponent,
-    IngresarimgComponent
+    IngresarimgComponent,
+    PruebaimgComponent,
+    PagopruebaComponent
   ],
   imports: [
     BrowserModule,
@@ -67,9 +97,13 @@ import { CategoriaService } from './Categoria/categoria.service';
     DropdownModule,
     TableModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FileUploadModule,
+    SocialLoginModule.initialize(config),
+
   ],
-  providers: [ServicioService, ProductoService, CategoriaService],
+  providers: [ServicioService, ProductoService,
+    CategoriaService, ImagenService, { provide: AuthServiceConfig, useFactory: provideConfig }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

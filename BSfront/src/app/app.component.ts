@@ -66,6 +66,8 @@ export class AppComponent {
             {
               items: [
                 { label: 'Subir IMG', routerLink: 'imagen/subir' },
+                { label: 'DEMO IMG', routerLink: 'imagen/pruebaimg' },
+                { label: 'Paypal prueba', routerLink: 'pago/pruebapago' },
               ]
             },
           ],

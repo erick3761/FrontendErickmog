@@ -38,10 +38,10 @@ export class IngresarimgComponent implements OnInit {
     this.httpClient.post('http://localhost:8585/image/upload', uploadImageData, { observe: 'response' })
       .subscribe((response) => {
         if (response.status === 200) {
-          this.message = 'Image uploaded successfully';
+          this.message = 'Imagen cargada correctamente';
           alert("subido");
         } else {
-          this.message = 'Image not uploaded successfully';
+          this.message = 'Error imagen';
           alert("Error subir");
         }
       }
