@@ -2,14 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Categoria } from './Categoria';
 import { Observable } from 'rxjs';
+import { environment } from "src/environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoriaService {
 
-  url: string = "http://localhost:8585/categoria";
-//
+  url: string = environment.servidorpuerto + "categoria";
+  //
   catSele: Categoria;
   categoria: Categoria[];
 

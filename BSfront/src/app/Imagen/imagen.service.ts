@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Imagen } from './Imagen';
 import { Observable } from 'rxjs';
-import { $ } from 'protractor';
+
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ImagenService {
-  url: string = "http://localhost:8585/image";
+  url: string = environment.servidorpuerto + "image";
 
   imagen: Imagen[];
   imagensele: Imagen;

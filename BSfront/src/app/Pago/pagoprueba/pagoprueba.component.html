@@ -1,1 +1,16 @@
-<p>pagoprueba works!</p>
+<div *ngIf="!paidFor">
+
+    <h1>Comprar PC - ${{producto.precio}} </h1>
+
+    <p> {{producto.descripcion}} </p>
+
+    <img src='{{producto.img}}' width="200">
+</div>
+
+<div *ngIf="paidFor">
+    <h1>COMPRASTE UNA PC GAMER</h1>
+</div>
+
+<div #paypal>
+
+</div>

@@ -3,13 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Servicio } from './Servicio';
 import { Observable } from 'rxjs';
 import { Categoria } from '../Categoria/Categoria';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicioService {
   //
-  private url: string = "http://localhost:8585/servicio";
+  private url: string = environment.servidorpuerto + "servicio";
   servicioSelect: Servicio;
   servicio: Servicio[];
 
